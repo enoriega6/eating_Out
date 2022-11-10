@@ -56,7 +56,7 @@ table1 <- xtabs(~race + eatout, data=mydata)
 rowPerc(table1)
 colPerc(table1)
 ```
-So the tables show, how white eat out more compared to blacks, and other. Other is at about 78%, and only 22% of them are saying they do not eat out.
+So the tables show, how white eat out more compared to blacks, and other. Other is at about 78%, and only 22% of them are saying they do not eat out. Still black seem to eat out less compared to the other two races, with the lowest percentage just below which is just under 69%.
 
 ## Inferential  
 
@@ -66,7 +66,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The p-value from the Chi-Square statistic is 0.0008, which is lower than 0.05. The null hypothesis is rejected. 
+The p-value from the Chi-Square statistic is 0.0008, which is lower than 0.05. The null hypothesis is rejected.   This table demonstrates the count of the white race that eats out, where 632 of them eat out when only 131 said they did not. While others equaled to 42 of them eat out, and only 12 did not.
 
 
 ```{r}
@@ -138,6 +138,11 @@ fisherXY = function(x, y, confL = 0, printAll=FALSE){
 ```{r}
 fisherXY(mydata$race,mydata$eatout)
 ```
-The fisher xy shows that the p-value equals to 0.0003864, which confirms that the null hypothesis is rejected, hence it is smaller than 0.05.
+The fisher xy shows that the p-value equals to 0.0003864, which confirms that the null hypothesis is rejected, hence it is smaller than 0.05. 
+
+
+## Conclusion  
+
+The fisher xy shows that the p-value equals to 0.0003864, which confirms that the null hypothesis is rejected, hence it is smaller than 0.05, concluding that there is a statistical difference in between at least two races with the frequency of eating out
 
 
